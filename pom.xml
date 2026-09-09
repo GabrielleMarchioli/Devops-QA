@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="
+         http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Spring Boot -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.1.1</version>
+        <relativePath/>
+    </parent>
+
+    <!-- Dados do projeto -->
+    <groupId>com.example</groupId>
+    <artifactId>educacao-continuada-gamificada</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <name>educacao-continuada-gamificada</name>
+
+    <description>
+        Projeto ATDD - Educação Continuada Gamificada
+    </description>
+
+    <!-- Java -->
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+
+    <!-- ====================================================== -->
+    <!-- DEPENDÊNCIAS                                           -->
+    <!-- ====================================================== -->
+
+    <dependencies>
+
+        <!-- ================================================== -->
+        <!-- SPRING WEB                                         -->
+        <!-- ================================================== -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+
+        <!-- ================================================== -->
+        <!-- SPRING DATA JPA                                    -->
+        <!-- ================================================== -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+
+        <!-- ================================================== -->
+        <!-- BANCO H2                                           -->
+        <!-- ================================================== -->
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+
+        <!-- ================================================== -->
+        <!-- POSTGRESQL                                         -->
+        <!-- ================================================== -->
+
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+
+        <!-- ================================================== -->
+        <!-- TESTES - JUNIT 5                                   -->
+        <!-- ================================================== -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+
+    <!-- ====================================================== -->
+    <!-- BUILD / PLUGINS                                       -->
+    <!-- ====================================================== -->
+
+    <build>
+
+        <plugins>
+
+            <!-- ================================================== -->
+            <!-- SPRING BOOT                                       -->
+            <!-- ================================================== -->
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+
+            <!-- ================================================== -->
+            <!-- JACOCO - COBERTURA DOS TESTES                      -->
+            <!-- ================================================== -->
+
+            <plugin>
+
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.13</version>
+
+                <executions>
+
+                    <!--
+                    Ativa o agente JaCoCo antes dos testes.
+                    Ele coleta as informações de cobertura.
+                    -->
+                    <execution>
+
+                        <id>prepare-agent</id>
+
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+
+                    </execution>
+
+
+                    <!--
+                    Gera o relatório HTML durante o mvn verify.
+                    -->
+                    <execution>
+
+                        <id>jacoco-report</id>
+
+                        <phase>verify</phase>
+
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+
+                    </execution>
+
+                </executions>
+
+            </plugin>
+
+        </plugins>
+
+    </build>
+
+</project>
