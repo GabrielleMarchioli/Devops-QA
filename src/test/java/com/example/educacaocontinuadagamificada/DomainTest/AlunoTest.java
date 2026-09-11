@@ -33,5 +33,14 @@ public class AlunoTest {
 
         // Assert
         assertEquals(0, aluno.getCursosLiberados()); }
-
+    @Test
+    public void naoDeveLiberarCursosQuandoMediaForIgualASete() {
+        // Arrange
+        Aluno aluno = new Aluno("Afonso");
+        // Action
+        aluno.avaliarConclusaoCurso(7.0);
+        // Assert
+        assertEquals(0, aluno.getCursosLiberados());
+    }
 }
+
