@@ -22,4 +22,16 @@ public class AlunoTest {
                 aluno.getCursosLiberados()
         );
     }
+
+    @Test public void naoDeveLiberarCursosQuandoMediaForMenorQueSete() {
+
+        // Arrange
+        Aluno aluno = new Aluno("Giulianno");
+
+        // Action
+        aluno.avaliarConclusaoCurso(6.0);
+
+        // Assert
+        assertEquals(0, aluno.getCursosLiberados()); }
+
 }
