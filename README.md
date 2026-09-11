@@ -291,8 +291,6 @@ Esse teste garante que alunos com média inferior a 7,0 não recebam os três cu
 
 ## Evidência — BDD/TDD Giulianno
 
-> PRINT AQUI
-
 ![Evidência Giulianno](docs/giulianno.png)
 
 ---
