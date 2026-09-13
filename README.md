@@ -341,21 +341,7 @@ O JaCoCo permite analisar:
 
 ---
 
-# 14. Cobertura na etapa GREEN
-
-Durante a etapa GREEN, o JaCoCo pode apresentar linhas ou branches ainda não totalmente cobertos.
-
-Essa análise é utilizada para identificar os cenários que ainda precisam ser exercitados pelos testes.
-
-## Evidência — JaCoCo GREEN
-
-> INSERIR AQUI O PRINT DO JACOCO NA ETAPA GREEN
-
-![JaCoCo GREEN](docs/jacoco-green.png)
-
----
-
-# 15. Cobertura final — BLUE
+# 14. Cobertura final — BLUE
 
 Após a inclusão dos BDDs de todos os integrantes e a refatoração do código, os testes devem cobrir todos os caminhos da classe de domínio.
 
