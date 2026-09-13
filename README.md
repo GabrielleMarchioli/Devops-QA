@@ -281,8 +281,6 @@ Isso torna a regra mais clara e facilita futuras alterações.
 
 ## Evidência — BLUE
 
-> PRINT APOS TODOS OS TESTES
-
 ![Evidência BLUE](docs/blue.png)
 
 ---
@@ -309,8 +307,6 @@ BUILD SUCCESS
 ```
 
 ## Evidência — Maven
-
-> BUILD SUCCESS PRINT ABAIXO
 
 ![Evidência Maven](docs/maven-build-success.png)
 
@@ -358,8 +354,6 @@ Classes: 100%
 Sem linhas amarelas ou vermelhas.
 
 ## Evidência — JaCoCo 100%
-
-> INSERIR AQUI O PRINT FINAL DO JACOCO COM 100%
 
 ![JaCoCo 100%](docs/jacoco-100.png)
 
