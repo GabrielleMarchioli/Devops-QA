@@ -2,6 +2,9 @@ package com.example.educacaocontinuadagamificada.Domain;
 
 public class Aluno {
 
+    private static final double MEDIA_MINIMA_BONUS = 7.0;
+    private static final int CURSOS_BONUS = 3;
+
     private String nome;
     private int cursosLiberados;
 
@@ -11,9 +14,8 @@ public class Aluno {
     }
 
     public void avaliarConclusaoCurso(double media) {
-
-        if (media > 7.0) {
-            cursosLiberados += 3;
+        if (media > MEDIA_MINIMA_BONUS) {
+            cursosLiberados += CURSOS_BONUS;
         }
     }
 
