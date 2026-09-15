@@ -32,59 +32,48 @@
         <java.version>17</java.version>
     </properties>
 
-
-    <!-- ====================================================== -->
-    <!-- DEPENDÊNCIAS                                           -->
-    <!-- ====================================================== -->
-
     <dependencies>
 
-        <!-- ================================================== -->
-        <!-- SPRING WEB                                         -->
-        <!-- ================================================== -->
-
+        <!-- Spring Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-
-        <!-- ================================================== -->
-        <!-- SPRING DATA JPA                                    -->
-        <!-- ================================================== -->
-
+        <!-- Spring Data JPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
+        <!-- H2 Console -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-h2console</artifactId>
+        </dependency>
 
-        <!-- ================================================== -->
-        <!-- BANCO H2                                           -->
-        <!-- ================================================== -->
-
+        <!-- Banco H2 -->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-
-        <!-- ================================================== -->
-        <!-- POSTGRESQL                                         -->
-        <!-- ================================================== -->
-
+        <!-- PostgreSQL -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
 
+        <!-- Swagger / OpenAPI -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>3.1.1</version>
+        </dependency>
 
-        <!-- ================================================== -->
-        <!-- TESTES - JUNIT 5                                   -->
-        <!-- ================================================== -->
-
+        <!-- Testes / JUnit 5 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -93,65 +82,39 @@
 
     </dependencies>
 
-
-    <!-- ====================================================== -->
-    <!-- BUILD / PLUGINS                                       -->
-    <!-- ====================================================== -->
-
     <build>
 
         <plugins>
 
-            <!-- ================================================== -->
-            <!-- SPRING BOOT                                       -->
-            <!-- ================================================== -->
-
+            <!-- Spring Boot -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-
-            <!-- ================================================== -->
-            <!-- JACOCO - COBERTURA DOS TESTES                      -->
-            <!-- ================================================== -->
-
+            <!-- JaCoCo -->
             <plugin>
-
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.13</version>
 
                 <executions>
 
-                    <!--
-                    Ativa o agente JaCoCo antes dos testes.
-                    Ele coleta as informações de cobertura.
-                    -->
+                    <!-- Coleta a cobertura durante os testes -->
                     <execution>
-
                         <id>prepare-agent</id>
-
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
-
                     </execution>
 
-
-                    <!--
-                    Gera o relatório HTML durante o mvn verify.
-                    -->
+                    <!-- Gera o relatório HTML -->
                     <execution>
-
                         <id>jacoco-report</id>
-
                         <phase>verify</phase>
-
                         <goals>
                             <goal>report</goal>
                         </goals>
-
                     </execution>
 
                 </executions>
