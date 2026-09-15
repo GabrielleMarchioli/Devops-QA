@@ -531,19 +531,6 @@ Exemplo de requisição:
   "moedas": 0
 }
 ```
-
-## Evidência — Swagger
-
-<!-- Adicionar print do Swagger com os endpoints -->
-
-![Swagger](docs/swagger.png)
-
-## Evidência — Swagger executando via Docker
-
-<!-- Adicionar print do Swagger aberto enquanto a aplicação está executando em container -->
-
-![Swagger Docker](docs/swagger-docker.png)
-
 ---
 
 # 18. Banco de dados H2
