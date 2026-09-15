@@ -808,13 +808,6 @@ PostgreSQL
 ```
 
 Após o cadastro de um novo aluno pelo frontend, o dashboard é atualizado automaticamente com os dados retornados pela API.
-
-## Evidência — Cadastro no VueJS
-
-<!-- Adicionar print do modal de cadastro ou do aluno recém-criado no dashboard -->
-
-![Cadastro Vue](docs/vue-cadastro.png)
-
 ---
 
 # 24. Persistência VueJS → PostgreSQL
