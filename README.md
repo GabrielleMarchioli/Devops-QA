@@ -603,14 +603,6 @@ O JPA/Hibernate é responsável pela criação e atualização da tabela:
 alunos
 ```
 
-## Evidência — Aplicação conectada ao PostgreSQL
-
-<!-- Adicionar print do terminal mostrando PostgreSQL JDBC Driver -->
-
-![Spring PostgreSQL](docs/spring-postgres.png)
-
----
-
 # 20. pgAdmin
 
 O pgAdmin foi utilizado como interface gráfica para gerenciamento e consulta do PostgreSQL.
