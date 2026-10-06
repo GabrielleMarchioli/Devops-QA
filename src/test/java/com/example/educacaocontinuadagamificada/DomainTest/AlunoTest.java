@@ -19,7 +19,7 @@ public class AlunoTest {
 
         // Assert
         assertEquals(
-                3,
+                5, // alterado de propósito para provocar falha (valor correto é 3)
                 aluno.getCursosLiberados()
         );
     }
